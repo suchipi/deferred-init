@@ -85,7 +85,7 @@ The net effect is that the first time you read a given key, its initializer
 function is run to get a resulting value, and on subsequent reads, that
 resulting value is re-used, without running the initializer function.
 
-- `@param` _initializers_ — A object whose keys are arbitrary (your choice) and whose values are functions assignable to the type `() => any`, where the returned `any` type is the initialized value. The values are considered "initializer functions" which get used the first time the corresponding key is read on the object returned by [deferredInit](#deferredinitexportedfunction).
+- `@param` _initializers_ — A object whose keys are arbitrary (your choice) and whose values are functions assignable to the type `() => any`, where the returned `any` type is the initialized value. The values are considered "initializer functions" which get used the first time the corresponding key is read on the object returned by [deferredInit](#deferredinit-exported-function).
 - `@returns` An object with the same keys as the initializers object passed in, which run the initializer function on the first read and re-use the result on later calls.
 
 ```ts
@@ -100,10 +100,10 @@ declare function deferredInit<
 
 ### isInitialized (exported function)
 
-Peek into an object returned by [deferredInit](#deferredinitexportedfunction) and check if one of its
+Peek into an object returned by [deferredInit](#deferredinit-exported-function) and check if one of its
 properties has been initialized, without causing initialization to occur.
 
-- `@param` _deferredInitResult_ — The object returned from [deferredInit](#deferredinitexportedfunction)
+- `@param` _deferredInitResult_ — The object returned from [deferredInit](#deferredinit-exported-function)
 - `@param` _key_ — The key on the object which you want to check the initialization status of
 - `@returns` A boolean indicating whether that key has been initialized yet.
 

@@ -7,7 +7,7 @@
     "ci": "npm run build && npm test",
     "test": "vitest",
     "build": "rm -rf dist && tsc && rm -rf dist/*.test.*",
-    "generate-api-readme-section": "npx dtsmd -i dist/index.d.ts --heading-offset 2 --links-json '{\"deferredInit\":\"#deferredinitexportedfunction\",\"isInitialized\":\"#isinitializedexportedfunction\"}' -o readme-api-chunk.md && echo now manually copy the contents of readme-api-chunk.md into the readme"
+    "generate-api-readme-section": "npx dtsmd -i dist/index.d.ts --heading-offset 2 --links-json '{\"deferredInit\":\"#deferredinit-exported-function\",\"isInitialized\":\"#isinitialized-exported-function\"}' -o readme-api-chunk.md && echo now manually copy the contents of readme-api-chunk.md into the readme"
   },
   "keywords": [
     "variable",
